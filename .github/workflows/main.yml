@@ -1,22 +1,20 @@
-# this is the first yml file indendation matters the most
+# this is the first yml file, indentation matters the most
 
-# name to the workflow
+# Name of the workflow
 name: first_workflow
 
-# Event
+# Event trigger
 on:
   push:
-    branches:[main]
+    branches: [main]
 
-# Provide job to do
-Jobs:
-  #name the jon
-  first_Job:
-  # Provide runner machine
-  runs-on: ubuntu-latest
+# Jobs section (always lowercase)
+jobs:
+  # Name of the job
+  first_job:
+    # Provide runner machine
+    runs-on: ubuntu-latest
 
-  steps:
-   - name: First_Task_To_Do
-     run: echo "Hello world to the first Workflow"
-
-  
+    steps:
+      - name: First_Task_To_Do
+        run: echo "Hello world to the first Workflow"
